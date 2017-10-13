@@ -21,18 +21,15 @@
 <body>
 
 <div class="container">
-    <h2>Vertical (basic) form</h2>
-    <form action="/action_page.php">
+    <h2>Person Details</h2>
+    <form method="post"  action="${createLink(controller: 'person', action: 'savePerson')}">
         <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            <label for="name">name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
         </div>
         <div class="form-group">
-            <label for="pwd">Password:</label>
-            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-        </div>
-        <div class="checkbox">
-            <label><input type="checkbox" name="remember"> Remember me</label>
+            <label for="age">Age:</label>
+            <input type="text" class="form-control" id="age" placeholder="Enter Age" name="age">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>

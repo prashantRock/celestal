@@ -2,19 +2,18 @@ package com
 
 class PhoneDetailsController {
 
-    def index() { }
-
-    def saveAddress(){
-        PhoneDetails phoneDetails = new PhoneDetails("3232332")
-        println phoneDetails = phoneDetails.save(flush: true, failOnError: true)
-        render "test"
+    def index() {
+        render(view: '/phoneDetails/phoneDetails')
     }
 
-    def fetchAllTransactions(){
-        List<PhoneDetails> phoneDetailsList =  PhoneDetails.findAll()
-        println phoneDetailsList.size()
-        phoneDetailsList.each {
-           println  it.address+"++++++++++++"+it.id
-        }
+    def savePhoneDetails(PhoneDetailsCO phoneDetailsCO){
+        PhoneDetail phoneDetails = new PhoneDetail(phoneDetailsCO)
+        phoneDetails.save(flush: true, failOnError: true)
+        render "save phone details"
+    }
+
+    def fetchAllPhoneDetails(){
+        List<PhoneDetail> phoneDetailsList =  PhoneDetail.findAll()
+        render(view: '/phoneDetails/phoneDetailsResult', model: [phoneDetailsList: phoneDetailsList])
     }
 }

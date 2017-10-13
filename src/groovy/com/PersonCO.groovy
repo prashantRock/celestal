@@ -1,7 +1,10 @@
 package com
 
-/**
- * Created by prashant on 23/8/17.
- */
+import grails.validation.Validateable
+
+@Validateable
 class PersonCO {
+    String name
+    int age
+
 }

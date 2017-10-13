@@ -2,7 +2,7 @@ package com
 
 import org.bson.types.ObjectId
 
-class PhoneDetails{
+class PhoneDetail {
 
     static mapWith = "mongo"
 
@@ -13,9 +13,9 @@ class PhoneDetails{
     static constraints = {
     }
 
-    public PhoneDetails(){}
+    public PhoneDetail(){}
 
-    public PhoneDetails(PhoneDetailsCO phoneDetailsCO){
+    public PhoneDetail(PhoneDetailsCO phoneDetailsCO){
         this.name = phoneDetailsCO.name
         this.phoneNumber = phoneDetailsCO.phoneNumber
     }

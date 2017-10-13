@@ -1,14 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: prashant
-  Date: 23/8/17
-  Time: 2:02 PM
---%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Person Details</title>
+    <title>Person Details - Mysql</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -30,8 +24,8 @@
 <g:each in="${personList}" var="person" status="i">
     <tr>
         <td>${i + 1}</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>${person.name}</td>
+        <td>${person.age}</td>
     </tr>
 </g:each>
     </tbody>
